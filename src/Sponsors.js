@@ -3,27 +3,27 @@ import React from 'react';
 function Sponsors() {
   const sponsors = {
     platinum: [
-      { name: "Tropical Smoothie Cafe", logo: "/Logos/trops.jpeg", url: "https://www.instagram.com/tropicalsmoothiefairhaven/" },
-      { name: "Better Way Primary Care", logo: "/Logos/bwpc.png", url: "https://www.betterwayprimarycare.com/" },
-      { name: "All Season Services", logo: "/Logos/All_Season_Services.jpg", url: "https://www.instagram.com/all.seasonsservices/" },
-      { name: "OSS Landscape", logo: "/Logos/oss.jpg", url: "https://www.instagram.com/osslandscapeandhardscape/" },
+      { name: "Tropical Smoothie Cafe", Logo: "/Logos/trops.jpeg", url: "https://www.instagram.com/tropicalsmoothiefairhaven/" },
+      { name: "Better Way Primary Care", Logo: "/Logos/bwpc.png", url: "https://www.betterwayprimarycare.com/" },
+      { name: "All Season Services", Logo: "/Logos/All_Season_Services.jpg", url: "https://www.instagram.com/all.seasonsservices/" },
+      { name: "OSS Landscape", Logo: "/Logos/oss.jpg", url: "https://www.instagram.com/osslandscapeandhardscape/" },
     ],
     gold: [
-      { name: "Cornerstone Financial Group", logo: "/Logos/Cornerstone.jpg", url: "https://cstonefinancial.com/" },
-      { name: "Rock Electric", logo: "/Logos/rock.png", url: "https://rockelectricinc.com/" },
-      { name: "Mattapoisett PD", logo: "/Logos/Matt_PD.jpg", url: "http://www.mattapoisettpolice.com/" },
-      { name: "Amp'd Up Electric", logo: "/Logos/ampd.png", url: "https://www.ampdupelectricalservices.com/" },
-      { name: "Buzzards Bay Basins", logo: "/Logos/basins.jpg", url: "https://www.buzzardsbaybasins.com/" },
-      { name: "Travelers Alehouse", logo: "/Logos/travelers.jpeg", url: "https://travelersalehouse.com/" },
-      { name: "Minkle Boys/Stone Path Malt", logo: "/Logos/Minkle_Boys.png", url: "https://www.minkleboyscatering.com/" },
-      { name: "River Junction", logo: "/Logos/River_Junction.png", url: "https://riverjunctionmarion.com/" },
-      { name: "Wash Ashore Car Wash", logo: "/Logos/washashore.png", url: "https://washashorecarwash.com/" },
+      { name: "Cornerstone Financial Group", Logo: "/Logos/Cornerstone.jpg", url: "https://cstonefinancial.com/" },
+      { name: "Rock Electric", Logo: "/Logos/rock.png", url: "https://rockelectricinc.com/" },
+      { name: "Mattapoisett PD", Logo: "/Logos/Matt_PD.jpg", url: "http://www.mattapoisettpolice.com/" },
+      { name: "Amp'd Up Electric", Logo: "/Logos/ampd.png", url: "https://www.ampdupelectricalservices.com/" },
+      { name: "Buzzards Bay Basins", Logo: "/Logos/basins.jpg", url: "https://www.buzzardsbaybasins.com/" },
+      { name: "Travelers Alehouse", Logo: "/Logos/travelers.jpeg", url: "https://travelersalehouse.com/" },
+      { name: "Minkle Boys/Stone Path Malt", Logo: "/Logos/Minkle_Boys.png", url: "https://www.minkleboyscatering.com/" },
+      { name: "River Junction", Logo: "/Logos/River_Junction.png", url: "https://riverjunctionmarion.com/" },
+      { name: "Wash Ashore Car Wash", Logo: "/Logos/washashore.png", url: "https://washashorecarwash.com/" },
     ],
     silver: [
-      { name: "Marion Golf Club", logo: "/Logos/mariongolf.png", url: "https://www.mariongolfclub.com/" },
-      { name: "Southeastern Development Co", logo: "/Logos/scd.png", url: "https://southeasterndevelopment.net/" },
-      { name: "Nick's Pizza", logo: "/Logos/nickspizza.png", url: "https://www.nickshomemadepizza.com/" },
-      { name: "Play Arcade", logo: "/Logos/play.png", url: "https://www.playarcadenb.com/" },
+      { name: "Marion Golf Club", Logo: "/Logos/mariongolf.png", url: "https://www.mariongolfclub.com/" },
+      { name: "Southeastern Development Co", Logo: "/Logos/scd.png", url: "https://southeasterndevelopment.net/" },
+      { name: "Nick's Pizza", Logo: "/Logos/nickspizza.png", url: "https://www.nickshomemadepizza.com/" },
+      { name: "Play Arcade", Logo: "/Logos/play.png", url: "https://www.playarcadenb.com/" },
     ],
   };
 
@@ -70,8 +70,8 @@ function Sponsors() {
               }}
             >
               <img
-                src={sponsor.logo}
-                alt={`${sponsor.name} logo`}
+                src={sponsor.Logo}
+                alt={`${sponsor.name} Logo`}
                 style={{ width: "60px", height: "60px", marginRight: "20px" }} // Slightly larger logo
               />
               <span style={{ fontSize: "20px", fontWeight: "bold", color: "#333" }}> {/* Larger text */}
