@@ -5,18 +5,18 @@ function Sponsors() {
     platinum: [
       { name: "Tropical Smoothie Cafe", logo: "/logos/trops.jpeg", url: "https://www.instagram.com/tropicalsmoothiefairhaven/" },
       { name: "Better Way Primary Care", logo: "/logos/bwpc.png", url: "https://www.betterwayprimarycare.com/" },
-      { name: "All Season Services", logo: "/logos/All Season Services.jpg", url: "https://www.instagram.com/all.seasonsservices/" },
+      { name: "All Season Services", logo: "/logos/All_Season_Services.jpg", url: "https://www.instagram.com/all.seasonsservices/" },
       { name: "OSS Landscape", logo: "/logos/oss.jpg", url: "https://www.instagram.com/osslandscapeandhardscape/" },
     ],
     gold: [
       { name: "Cornerstone Financial Group", logo: "/logos/Cornerstone.jpg", url: "https://cstonefinancial.com/" },
       { name: "Rock Electric", logo: "/logos/rock.png", url: "https://rockelectricinc.com/" },
-      { name: "Mattapoisett PD", logo: "/logos/Matt PD.jpg", url: "http://www.mattapoisettpolice.com/" },
+      { name: "Mattapoisett PD", logo: "/logos/Matt_PD.jpg", url: "http://www.mattapoisettpolice.com/" },
       { name: "Amp'd Up Electric", logo: "/logos/ampd.png", url: "https://www.ampdupelectricalservices.com/" },
       { name: "Buzzards Bay Basins", logo: "/logos/basins.jpg", url: "https://www.buzzardsbaybasins.com/" },
       { name: "Travelers Alehouse", logo: "/logos/travelers.jpeg", url: "https://travelersalehouse.com/" },
-      { name: "Minkle Boys/Stone Path Malt", logo: "/logos/Minkle Boys.png", url: "https://www.minkleboyscatering.com/" },
-      { name: "River Junction", logo: "/logos/River Junction.png", url: "https://riverjunctionmarion.com/" },
+      { name: "Minkle Boys/Stone Path Malt", logo: "/logos/Minkle_Boys.png", url: "https://www.minkleboyscatering.com/" },
+      { name: "River Junction", logo: "/logos/River_Junction.png", url: "https://riverjunctionmarion.com/" },
       { name: "Wash Ashore Car Wash", logo: "/logos/washashore.png", url: "https://washashorecarwash.com/" },
     ],
     silver: [
