@@ -15,23 +15,23 @@ function StatisticsPage() {
   const teamLogos = {
     "Tropical Smoothie Cafe": "/logos/trops.jpeg",
     "Better Way Primary Care": "/logos/bwpc.png",
-    "All Season Services": "/logos/All Season Services.jpg",
+    "All Season Services": "/logos/All_Season_Services.jpg",
     "OSS Landscape": "/logos/oss.jpg",
     "Cornerstone Financial": "/logos/Cornerstone.jpg",
     "Rock Electric": "/logos/rock.png",
-    "Mattapoisett PD": "/logos/Matt PD.jpg",
+    "Mattapoisett PD": "/logos/Matt_PD.jpg",
     "Amp'd Up": "/logos/ampd.png",
     "Buzzards Bay Basins": "/logos/basins.jpg",
     "Traveler's Alehouse": "/logos/travelers.jpeg",
-    "Minkle Boys / SPM": "/logos/Minkle Boys.png",
-    "River Junction": "/logos/River Junction.png",
+    "Minkle Boys / SPM": "/logos/Minkle_Boys.png",
+    "River Junction": "/logos/River_Junction.png",
     "Wash Ashore": "/logos/washashore.png",
-    "Cantara Brothers Co": "/logos/Cantara Brothers Co.png"
+    "Cantara Brothers Co": "/logos/Cantara_Brothers_Co.png"
   };
 
   useEffect(() => {
     // Fetch season leaders data from the "Statistics" tab
-    const statisticsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/Statistics!A1:Z1000?key=AIzaSyAQQPxbPiu32yVmxzQMp9YCQWCGWa4uVNo`;
+    const playerCardApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/PlayerCard!A1:Z1000?key=${process.env.REACT_APP_GOOGLE_SHEETS_API_KEY}`;
 
     fetch(statisticsApiUrl)
       .then((response) => {
@@ -83,7 +83,7 @@ function StatisticsPage() {
 
   useEffect(() => {
     // Fetch full player stats data from the "PlayerCard" tab
-    const playerCardApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/PlayerCard!A1:Z1000?key=AIzaSyAQQPxbPiu32yVmxzQMp9YCQWCGWa4uVNo`;
+    const playerCardApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/PlayerCard!A1:Z1000?key=${process.env.REACT_APP_GOOGLE_SHEETS_API_KEY}`;
 
     fetch(playerCardApiUrl)
       .then((response) => {
