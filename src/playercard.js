@@ -28,7 +28,7 @@ function PlayerCard() {
 
   useEffect(() => {
     // Fetch player data from the PlayerCard sheet
-    const playerApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/PlayerCard!A1:Z1000?key=AIzaSyAQQPxbPiu32yVmxzQMp9YCQWCGWa4uVNo`;
+    const playerApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/PlayerCard!A1:Z1000?key=${process.env.REACT_APP_GOOGLE_SHEETS_API_KEY}`;
     console.log('Fetching player data from:', playerApiUrl);
 
     fetch(playerApiUrl)
@@ -59,7 +59,7 @@ function PlayerCard() {
       });
 
     // Fetch previous seasons data from the PreviousSeasons sheet
-    const previousSeasonsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/PreviousSeasons!A1:Z1000?key=AIzaSyAQQPxbPiu32yVmxzQMp9YCQWCGWa4uVNo`;
+    const previousSeasonsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/PreviousSeasons!A1:Z1000?key=${process.env.REACT_APP_GOOGLE_SHEETS_API_KEY}`;
     console.log('Fetching previous seasons data from:', previousSeasonsApiUrl);
 
     fetch(previousSeasonsApiUrl)
@@ -88,7 +88,7 @@ function PlayerCard() {
       });
 
     // Fetch game-by-game stats from the GameStats sheet
-    const gameStatsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/GameStats!A1:Z1000?key=AIzaSyAQQPxbPiu32yVmxzQMp9YCQWCGWa4uVNo`;
+    const gameStatsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/GameStats!A1:Z1000?key=${process.env.REACT_APP_GOOGLE_SHEETS_API_KEY}`;
     console.log('Fetching game stats data from:', gameStatsApiUrl);
 
     fetch(gameStatsApiUrl)
