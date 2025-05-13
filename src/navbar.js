@@ -52,7 +52,7 @@ function Navbar() {
           </button>
           <div className="dropdown-content">
             <Link to="/teams/allseason" onClick={handleLinkClick}>All Season Services</Link>
-            <Link to="/teams/ampd" onClick={handleLinkClick}>Amp'd Up</Link>
+            <Link to="/teams/ampd" onClick={handleLinkClick}>Amp&apos;d Up</Link>
             <Link to="/teams/basins" onClick={handleLinkClick}>Buzzards Bay Basins</Link>
             <Link to="/teams/bwpc" onClick={handleLinkClick}>Better Way Primary Care</Link>
             <Link to="/teams/cantara" onClick={handleLinkClick}>Cantara Brothers Co</Link>
@@ -63,7 +63,7 @@ function Navbar() {
             <Link to="/teams/riverjunction" onClick={handleLinkClick}>River Junction</Link>
             <Link to="/teams/rock" onClick={handleLinkClick}>Rock Electric</Link>
             <Link to="/teams/trops" onClick={handleLinkClick}>Tropical Smoothie</Link>
-            <Link to="/teams/travelers" onClick={handleLinkClick}>Traveler's Alehouse</Link>
+            <Link to="/teams/travelers" onClick={handleLinkClick}>Traveler&apos;s Alehouse</Link>
             <Link to="/teams/washashore" onClick={handleLinkClick}>Wash Ashore</Link>
           </div>
         </div>
