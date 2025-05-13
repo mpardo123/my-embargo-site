@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'; // Import PropTypes
 
 function TeamPage({ teamName }) {
   const [players, setPlayers] = useState([]);
@@ -162,5 +163,9 @@ function TeamPage({ teamName }) {
     </div>
   );
 }
+
+TeamPage.propTypes = {
+  teamName: PropTypes.string.isRequired, // Validate that teamName is a required string
+};
 
 export default TeamPage;
