@@ -246,7 +246,7 @@ function SchedulePage() {
       <td className="matchup-column">
         <img
           src={teamLogos[game.team1]}
-          alt={`${game.team1} logo`}
+          alt={`${game.team1} Logo`}
           style={{ width: "30px", height: "30px" }}
         />
         <span style={{ color: teamColors[game.team1], fontWeight: "bold" }}>
@@ -255,7 +255,7 @@ function SchedulePage() {
         <span style={{ margin: "0 10px" }}>VS</span>
         <img
           src={teamLogos[game.team2]}
-          alt={`${game.team2} logo`}
+          alt={`${game.team2} Logo`}
           style={{ width: "30px", height: "30px" }}
         />
         <span style={{ color: teamColors[game.team2], fontWeight: "bold" }}>
