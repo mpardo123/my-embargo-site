@@ -22,7 +22,7 @@ function AboutPage() {
         We believe in more than just basketball – we believe in creating memories, building friendships, and giving back to our community. Our commitment to player experience is unmatched, with carefully curated schedules, organized events, and a focus on sportsmanship and respect on and off the court.
       </p>
       <p>
-        Join us and experience what makes <strong>The Embargo League</strong> more than just a basketball league. It's where great games, lifelong friendships, and unforgettable moments happen every summer.
+        Join us and experience what makes <strong>The Embargo League</strong> more than just a basketball league. It&apos;s where great games, lifelong friendships, and unforgettable moments happen every summer.
       </p>
 
       {/* Meet the Team Section */}
