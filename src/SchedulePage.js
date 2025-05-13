@@ -25,20 +25,20 @@ function SchedulePage() {
 
   // Define team logos
   const teamLogos = {
-    "Wash Ashore": "/logos/washashore.png",
-    "Buzzards Bay Basins": "/logos/basins.jpg",
-    "Cantara Brothers Co": "/logos/Cantara_Brothers_Co.png",
-    "OSS Landscape": "/logos/oss.jpg",
-    "Tropical Smoothie Cafe": "/logos/trops.jpeg",
-    "Traveler's Alehouse": "/logos/travelers.jpeg",
-    "Mattapoisett PD": "/logos/Matt_PD.jpg",
-    "Amp'd Up": "/logos/ampd.png",
-    "River Junction": "/logos/River_Junction.png",
-    "Rock Electric": "/logos/rock.png",
-    "Cornerstone Financial": "/logos/Cornerstone.jpg",
-    "Minkle Boys / SPM": "/logos/Minkle_Boys.png",
-    "Better Way Primary Care": "/logos/bwpc.png",
-    "All Season Services": "/logos/All_Season_Services.jpg",
+    "Wash Ashore": "/Logos/washashore.png",
+    "Buzzards Bay Basins": "/Logos/basins.jpg",
+    "Cantara Brothers Co": "/Logos/Cantara_Brothers_Co.png",
+    "OSS Landscape": "/Logos/oss.jpg",
+    "Tropical Smoothie Cafe": "/Logos/trops.jpeg",
+    "Traveler's Alehouse": "/Logos/travelers.jpeg",
+    "Mattapoisett PD": "/Logos/Matt_PD.jpg",
+    "Amp'd Up": "/Logos/ampd.png",
+    "River Junction": "/Logos/River_Junction.png",
+    "Rock Electric": "/Logos/rock.png",
+    "Cornerstone Financial": "/Logos/Cornerstone.jpg",
+    "Minkle Boys / SPM": "/Logos/Minkle_Boys.png",
+    "Better Way Primary Care": "/Logos/bwpc.png",
+    "All Season Services": "/Logos/All_Season_Services.jpg",
   };
 
   // Full schedule data
