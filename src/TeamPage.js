@@ -8,20 +8,20 @@ function TeamPage({ teamName }) {
 
   // Define team colors
   const teamColors = {
-    "All Season Services": { primary: "#b2b6b7", secondary: "#e888a3", logo: "/logos/All_Season_Services.jpg" },
-    "Amp'd Up": { primary: "#e41616", secondary: "#000000", logo: "/logos/ampd.png" },
-    "Buzzards Bay Basins": { primary: "#1e633f", secondary: "#000000", logo: "/logos/basins.jpg" },
-    "Better Way Primary Care": { primary: "#acc5d7", secondary: "#8abf6f", logo: "/logos/bwpc.png" },
-    "Cornerstone Financial": { primary: "#c0bcdc", secondary: "#3a3c92", logo: "/logos/Cornerstone.jpg" },
-    "Cantara Brothers Co": { primary: "#e888a3", secondary: "#000000", logo: "/logos/Cantara_Brothers_Co.png" },
-    "OSS Landscape": { primary: "#373879", secondary: "#b1b7b7", logo: "/logos/oss.jpg" },
-    "Wash Ashore": { primary: "#ede4c0", secondary: "#689bbc", logo: "/logos/washashore.png" },
-    "Mattapoisett PD": { primary: "#000000", secondary: "#0e4769", logo: "/logos/Matt_PD.jpg" },
-    "Minkle Boys / SPM": { primary: "#ffe327", secondary: "#000000", logo: "/logos/Minkle_Boys.png" },
-    "River Junction": { primary: "#fa690c", secondary: "#000000", logo: "/logos/River_Junction.png" },
-    "Rock Electric": { primary: "#012a52", secondary: "#e25f28", logo: "/logos/rock.png" },
-    "Traveler's Alehouse": { primary: "#b89d52", secondary: "#000000", logo: "/logos/travelers.jpeg" },
-    "Tropical Smoothie Cafe": { primary: "#00b0de", secondary: "#da3987", logo: "/logos/trops.jpeg" }
+    "All Season Services": { primary: "#b2b6b7", secondary: "#e888a3", logo: "/Logos/All_Season_Services.jpg" },
+    "Amp'd Up": { primary: "#e41616", secondary: "#000000", logo: "/Logos/ampd.png" },
+    "Buzzards Bay Basins": { primary: "#1e633f", secondary: "#000000", logo: "/Logos/basins.jpg" },
+    "Better Way Primary Care": { primary: "#acc5d7", secondary: "#8abf6f", logo: "/Logos/bwpc.png" },
+    "Cornerstone Financial": { primary: "#c0bcdc", secondary: "#3a3c92", logo: "/Logos/Cornerstone.jpg" },
+    "Cantara Brothers Co": { primary: "#e888a3", secondary: "#000000", logo: "/Logos/Cantara_Brothers_Co.png" },
+    "OSS Landscape": { primary: "#373879", secondary: "#b1b7b7", logo: "/Logos/oss.jpg" },
+    "Wash Ashore": { primary: "#ede4c0", secondary: "#689bbc", logo: "/Logos/washashore.png" },
+    "Mattapoisett PD": { primary: "#000000", secondary: "#0e4769", logo: "/Logos/Matt_PD.jpg" },
+    "Minkle Boys / SPM": { primary: "#ffe327", secondary: "#000000", logo: "/Logos/Minkle_Boys.png" },
+    "River Junction": { primary: "#fa690c", secondary: "#000000", logo: "/Logos/River_Junction.png" },
+    "Rock Electric": { primary: "#012a52", secondary: "#e25f28", logo: "/Logos/rock.png" },
+    "Traveler's Alehouse": { primary: "#b89d52", secondary: "#000000", logo: "/Logos/travelers.jpeg" },
+    "Tropical Smoothie Cafe": { primary: "#00b0de", secondary: "#da3987", logo: "/Logos/trops.jpeg" }
   };
 
   // Get the team's colors or use default colors
