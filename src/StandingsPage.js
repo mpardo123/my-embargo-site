@@ -25,7 +25,7 @@ function StandingsPage() {
   };
 
   const fetchStandings = (year) => {
-    const standingsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/Standings_${year}!A1:Z1000?key=AIzaSyAQQPxbPiu32yVmxzQMp9YCQWCGWa4uVNo`;
+    const standingsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/Standings_2025!A1:Z1000?key=${process.env.REACT_APP_GOOGLE_SHEETS_API_KEY}`;
 
     fetch(standingsApiUrl)
       .then(response => {
