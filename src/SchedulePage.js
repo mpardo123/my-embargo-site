@@ -27,18 +27,18 @@ function SchedulePage() {
   const teamLogos = {
     "Wash Ashore": "/logos/washashore.png",
     "Buzzards Bay Basins": "/logos/basins.jpg",
-    "Cantara Brothers Co": "/logos/Cantara Brothers Co.png",
+    "Cantara Brothers Co": "/logos/Cantara_Brothers_Co.png",
     "OSS Landscape": "/logos/oss.jpg",
     "Tropical Smoothie Cafe": "/logos/trops.jpeg",
     "Traveler's Alehouse": "/logos/travelers.jpeg",
-    "Mattapoisett PD": "/logos/Matt PD.jpg",
+    "Mattapoisett PD": "/logos/Matt_PD.jpg",
     "Amp'd Up": "/logos/ampd.png",
-    "River Junction": "/logos/River Junction.png",
+    "River Junction": "/logos/River_Junction.png",
     "Rock Electric": "/logos/rock.png",
     "Cornerstone Financial": "/logos/Cornerstone.jpg",
-    "Minkle Boys / SPM": "/logos/Minkle Boys.png",
+    "Minkle Boys / SPM": "/logos/Minkle_Boys.png",
     "Better Way Primary Care": "/logos/bwpc.png",
-    "All Season Services": "/logos/All Season Services.jpg",
+    "All Season Services": "/logos/All_Season_Services.jpg",
   };
 
   // Full schedule data
@@ -125,7 +125,7 @@ function SchedulePage() {
 
   // Fetch standings data
   useEffect(() => {
-    const standingsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/Standings_2025!A1:Z1000?key=AIzaSyAQQPxbPiu32yVmxzQMp9YCQWCGWa4uVNo`;
+    const standingsApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/Standings_2025!A1:Z1000?key=${process.env.REACT_APP_GOOGLE_SHEETS_API_KEY}`;
 
     fetch(standingsApiUrl)
       .then(response => {
