@@ -84,9 +84,9 @@ function TeamPage({ teamName }) {
       }}
     >
       <div className="team-header" style={{ marginBottom: "20px" }}>
-      <img 
-      src={`${process.env.PUBLIC_URL}
-      ${teamColor.Logo}`} alt={`${teamName} Logo`}
+    
+      <img src="/Logos/All_Season_Services.jpg" alt="Test Logo"
+
 
           className="team-logo"
           style={{
