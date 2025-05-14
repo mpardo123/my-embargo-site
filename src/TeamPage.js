@@ -84,10 +84,11 @@ function TeamPage({ teamName }) {
       }}
     >
       <div className="team-header" style={{ marginBottom: "20px" }}>
-        <img
-          src={teamColor.Logo}
-          alt={`${teamName} Logo`}
-          className="team-Logo"
+      <img 
+      src={`${process.env.PUBLIC_URL}
+      ${teamColor.Logo}`} alt={`${teamName} Logo`}
+
+          className="team-logo"
           style={{
             width: "100px", // Set a fixed width for the Logo
             height: "100px", // Set a fixed height for the Logo
