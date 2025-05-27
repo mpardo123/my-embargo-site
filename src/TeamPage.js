@@ -8,20 +8,20 @@ function TeamPage({ teamName }) {
 
   // Define team colors
   const teamColors = {
-    "All Season Services": { primary: "#b2b6b7", secondary: "#e888a3", Logo: "/Logos/All_Season_Services.jpg" },
-    "Amp'd Up": { primary: "#e41616", secondary: "#000000", Logo: "/Logos/ampd.png" },
-    "Buzzards Bay Basins": { primary: "#1e633f", secondary: "#000000", Logo: "/Logos/basins.jpg" },
-    "Better Way Primary Care": { primary: "#acc5d7", secondary: "#8abf6f", Logo: "/Logos/bwpc.png" },
-    "Cornerstone Financial": { primary: "#c0bcdc", secondary: "#3a3c92", Logo: "/Logos/Cornerstone.jpg" },
-    "Cantara Brothers Co": { primary: "#e888a3", secondary: "#000000", Logo: "/Logos/Cantara_Brothers_Co.png" },
-    "OSS Landscape": { primary: "#373879", secondary: "#b1b7b7", Logo: "/Logos/oss.jpg" },
-    "Wash Ashore": { primary: "#ede4c0", secondary: "#689bbc", Logo: "/Logos/washashore.png" },
-    "Mattapoisett PD": { primary: "#000000", secondary: "#0e4769", Logo: "/Logos/Matt_PD.jpg" },
-    "Minkle Boys / SPM": { primary: "#ffe327", secondary: "#000000", Logo: "/Logos/Minkle_Boys.png" },
-    "River Junction": { primary: "#fa690c", secondary: "#000000", Logo: "/Logos/River_Junction.png" },
-    "Rock Electric": { primary: "#012a52", secondary: "#e25f28", Logo: "/Logos/rock.png" },
-    "Traveler's Alehouse": { primary: "#b89d52", secondary: "#000000", Logo: "/Logos/travelers.jpeg" },
-    "Tropical Smoothie Cafe": { primary: "#00b0de", secondary: "#da3987", Logo: "/Logos/trops.jpeg" }
+    "All Season Services": { primary: "#b2b6b7", secondary: "#e888a3", Logo: "/All Season Services.jpg" },
+    "Amp'd Up": { primary: "#e41616", secondary: "#000000", Logo: "/Ampd.png" },
+    "Buzzards Bay Basins": { primary: "#1e633f", secondary: "#000000", Logo: "/Basins.jpg" },
+    "Better Way Primary Care": { primary: "#acc5d7", secondary: "#8abf6f", Logo: "/bwpc.png" },
+    "Cornerstone Financial": { primary: "#c0bcdc", secondary: "#3a3c92", Logo: "/Cornerstone.jpg" },
+    "Cantara Brothers Co": { primary: "#e888a3", secondary: "#000000", Logo: "/Cantara Bros.png" },
+    "OSS Landscape": { primary: "#373879", secondary: "#b1b7b7", Logo: "/OSS.jpg" },
+    "Wash Ashore": { primary: "#ede4c0", secondary: "#689bbc", Logo: "/Wash Ashore.png" },
+    "Mattapoisett PD": { primary: "#000000", secondary: "#0e4769", Logo: "/Matt PD.jpg" },
+    "Minkle Boys / SPM": { primary: "#ffe327", secondary: "#000000", Logo: "/Minkle Boys.png" },
+    "River Junction": { primary: "#fa690c", secondary: "#000000", Logo: "/River Junction.png" },
+    "Rock Electric": { primary: "#012a52", secondary: "#e25f28", Logo: "/rock.png" },
+    "Traveler's Alehouse": { primary: "#b89d52", secondary: "#000000", Logo: "/travelers.jpeg" },
+    "Tropical Smoothie Cafe": { primary: "#00b0de", secondary: "#da3987", Logo: "/trops.jpeg" }
   };
 
   // Get the team's colors or use default colors
@@ -85,7 +85,7 @@ function TeamPage({ teamName }) {
     >
       <div className="team-header" style={{ marginBottom: "20px" }}>
     
-      <img src="/Logos/All_Season_Services.jpg" alt="Test Logo"
+      <img src={`${process.env.PUBLIC_URL}${teamColor.Logo}`} alt={`${teamName} Logo`}
 
 
           className="team-logo"
