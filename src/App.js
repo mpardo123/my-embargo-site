@@ -12,6 +12,7 @@ import ContactPage from './ContactPage';
 import AboutPage from './AboutPage';
 import StatisticsPage from './StatisticsPage'; // Import the StatisticsPage component
 import AwardsPage from './AwardsPage';
+import BoxScorePage from './BoxScorePage'; // Create this component
 
 
 
@@ -53,6 +54,8 @@ function App() {
 <Route path="/about" element={<AboutPage />} />
 <Route path="/statistics" element={<StatisticsPage />} />
 <Route path="/awards" element={<AwardsPage />} />
+<Route path="/boxscore/:week/:team1/:team2" element={<BoxScorePage />} />
+<Route path="/players/:playerName" element={<PlayerCard />} /> {/* Player Card Route */}
         </Routes>
       </div>
     </Router>
