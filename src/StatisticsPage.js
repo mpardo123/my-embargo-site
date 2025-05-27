@@ -13,20 +13,20 @@ function StatisticsPage() {
 
   // Map of team names to their logo file paths
   const teamLogos = {
-    "Tropical Smoothie Cafe": "/Logos/trops.jpeg",
-    "Better Way Primary Care": "/Logos/bwpc.png",
-    "All Season Services": "/Logos/All_Season_Services.jpg",
-    "OSS Landscape": "/Logos/oss.jpg",
-    "Cornerstone Financial": "/Logos/Cornerstone.jpg",
-    "Rock Electric": "/Logos/rock.png",
-    "Mattapoisett PD": "/Logos/Matt_PD.jpg",
-    "Amp'd Up": "/Logos/ampd.png",
-    "Buzzards Bay Basins": "/Logos/basins.jpg",
-    "Traveler's Alehouse": "/Logos/travelers.jpeg",
-    "Minkle Boys / SPM": "/Logos/Minkle_Boys.png",
-    "River Junction": "/Logos/River_Junction.png",
-    "Wash Ashore": "/Logos/washashore.png",
-    "Cantara Brothers Co": "/Logos/Cantara_Brothers_Co.png"
+    "Tropical Smoothie Cafe": "/trops.jpeg",
+    "Better Way Primary Care": "/bwpc.png",
+    "All Season Services": "/All Season Services.jpg",
+    "OSS Landscape": "/OSS.jpg",
+    "Cornerstone Financial": "/Cornerstone.jpg",
+    "Rock Electric": "/rock.png",
+    "Mattapoisett PD": "/Matt PD.jpg",
+    "Amp'd Up": "/Ampd.png",
+    "Buzzards Bay Basins": "/Basins.jpg",
+    "Traveler's Alehouse": "/travelers.jpeg",
+    "Minkle Boys / SPM": "/Minkle Boys.png",
+    "River Junction": "/River Junction.png",
+    "Wash Ashore": "/Wash Ashore.png",
+    "Cantara Brothers Co": "/Cantara Bros.png"
   };
 
   useEffect(() => {
