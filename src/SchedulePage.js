@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 function SchedulePage() {
   const [currentWeek, setCurrentWeek] = useState(1); // Track the current week
   const [standings, setStandings] = useState({});
   const [error, setError] = useState(null);
+  const [scores, setScores] = useState([]);
 
   // Define team colors
   const teamColors = {
@@ -25,20 +28,20 @@ function SchedulePage() {
 
   // Define team logos
   const teamLogos = {
-    "Wash Ashore": "/Logos/washashore.png",
-    "Buzzards Bay Basins": "/Logos/basins.jpg",
-    "Cantara Brothers Co": "/Logos/Cantara_Brothers_Co.png",
-    "OSS Landscape": "/Logos/oss.jpg",
-    "Tropical Smoothie Cafe": "/Logos/trops.jpeg",
-    "Traveler's Alehouse": "/Logos/travelers.jpeg",
-    "Mattapoisett PD": "/Logos/Matt_PD.jpg",
-    "Amp'd Up": "/Logos/ampd.png",
-    "River Junction": "/Logos/River_Junction.png",
-    "Rock Electric": "/Logos/rock.png",
-    "Cornerstone Financial": "/Logos/Cornerstone.jpg",
-    "Minkle Boys / SPM": "/Logos/Minkle_Boys.png",
-    "Better Way Primary Care": "/Logos/bwpc.png",
-    "All Season Services": "/Logos/All_Season_Services.jpg",
+    "Tropical Smoothie Cafe": "/trops.jpeg",
+    "Better Way Primary Care": "/bwpc.png",
+    "All Season Services": "/All Season Services.jpg",
+    "OSS Landscape": "/OSS.jpg",
+    "Cornerstone Financial": "/Cornerstone.jpg",
+    "Rock Electric": "/rock.png",
+    "Mattapoisett PD": "/Matt PD.jpg",
+    "Amp'd Up": "/Ampd.png",
+    "Buzzards Bay Basins": "/Basins.jpg",
+    "Traveler's Alehouse": "/travelers.jpeg",
+    "Minkle Boys / SPM": "/Minkle Boys.png",
+    "River Junction": "/River Junction.png",
+    "Wash Ashore": "/Wash Ashore.png",
+    "Cantara Brothers Co": "/Cantara Bros.png"
   };
 
   // Full schedule data
@@ -151,6 +154,36 @@ function SchedulePage() {
       });
   }, []);
 
+  useEffect(() => {
+    const scoresApiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1aRRv1kR7BweWa7GZInAncIvpWwks0Ttm7_WAz5FWpRA/values/Scores_2025!A1:Z1000?key=${process.env.REACT_APP_GOOGLE_SHEETS_API_KEY}`;
+  
+    fetch(scoresApiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const rows = data.values;
+        const headers = rows[0];
+        const scoresData = rows.slice(1).map(row => ({
+          week: parseInt(row[headers.indexOf("Week")], 10),
+          date: row[headers.indexOf("Date")],
+          time: row[headers.indexOf("Time")],
+          team1: row[headers.indexOf("Team 1")],
+          team2: row[headers.indexOf("Team 2")],
+          score1: row[headers.indexOf("Score 1")],
+          score2: row[headers.indexOf("Score 2")],
+        }));
+        setScores(scoresData);
+      })
+      .catch(error => {
+        console.error('Error fetching scores data:', error);
+        setError('Failed to fetch scores data.');
+      });
+  }, []);
+
   // Filter games for the current week
   const gamesForCurrentWeek = scheduleData.filter(game => game.week === currentWeek);
 
@@ -244,23 +277,28 @@ function SchedulePage() {
       <td style={{ padding: "10px", textAlign: "center" }}>{game.date}</td>
       <td style={{ padding: "10px", textAlign: "center" }}>{game.time}</td>
       <td className="matchup-column">
-        <img
-          src={teamLogos[game.team1]}
-          alt={`${game.team1} Logo`}
-          style={{ width: "30px", height: "30px" }}
-        />
-        <span style={{ color: teamColors[game.team1], fontWeight: "bold" }}>
-          {game.team1} ({standings[game.team1] || "0-0"})
-        </span>
-        <span style={{ margin: "0 10px" }}>VS</span>
-        <img
-          src={teamLogos[game.team2]}
-          alt={`${game.team2} Logo`}
-          style={{ width: "30px", height: "30px" }}
-        />
-        <span style={{ color: teamColors[game.team2], fontWeight: "bold" }}>
-          {game.team2} ({standings[game.team2] || "0-0"})
-        </span>
+        <Link
+          to={`/boxscore/${currentWeek}/${encodeURIComponent(game.team1)}/${encodeURIComponent(game.team2)}`}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <img
+            src={teamLogos[game.team1]}
+            alt={`${game.team1} Logo`}
+            style={{ width: "30px", height: "30px" }}
+          />
+          <span style={{ color: teamColors[game.team1], fontWeight: "bold" }}>
+            {game.team1} ({standings[game.team1] || "0-0"}) - {scores.find(score => score.week === currentWeek && score.team1 === game.team1 && score.team2 === game.team2)?.score1 || "TBD"}
+          </span>
+          <span style={{ margin: "0 10px" }}>VS</span>
+          <img
+            src={teamLogos[game.team2]}
+            alt={`${game.team2} Logo`}
+            style={{ width: "30px", height: "30px" }}
+          />
+          <span style={{ color: teamColors[game.team2], fontWeight: "bold" }}>
+            {game.team2} ({standings[game.team2] || "0-0"}) - {scores.find(score => score.week === currentWeek && score.team1 === game.team1 && score.team2 === game.team2)?.score2 || "TBD"}
+          </span>
+        </Link>
       </td>
     </tr>
   ))}
